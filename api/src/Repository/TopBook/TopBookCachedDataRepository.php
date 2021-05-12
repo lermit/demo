@@ -9,8 +9,8 @@ use Symfony\Contracts\Cache\CacheInterface;
 
 final class TopBookCachedDataRepository implements TopBookDataInterface
 {
-    private TopBookDataInterface $repository;
-    private CacheInterface $cache;
+    private $repository;
+    private $cache;
 
     public function __construct(TopBookDataInterface $repository, CacheInterface $cache)
     {

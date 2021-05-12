@@ -9,7 +9,7 @@ use ApiPlatform\Core\DataProvider\Pagination;
 
 final class TopBookPaginationExtension implements TopBookCollectionExtensionInterface
 {
-    private Pagination $pagination;
+    private $pagination;
 
     public function __construct(Pagination $pagination)
     {

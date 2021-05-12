@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 final class OpenApiFactory implements OpenApiFactoryInterface
 {
-    private OpenApiFactoryInterface $decorated;
+    private $decorated;
 
     public function __construct(OpenApiFactoryInterface $decorated)
     {

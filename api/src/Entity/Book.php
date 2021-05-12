@@ -51,7 +51,7 @@ class Book
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      */
-    private ?UuidInterface $id = null;
+    private $id = null;
 
     /**
      * @var string|null The ISBN of the book
@@ -61,7 +61,7 @@ class Book
      * @Groups("book:read")
      * @ApiProperty(iri="http://schema.org/isbn")
      */
-    public ?string $isbn = null;
+    public $isbn = null;
 
     /**
      * @var string|null The title of the book
@@ -72,7 +72,7 @@ class Book
      * @Groups({"book:read", "review:read"})
      * @ApiProperty(iri="http://schema.org/name")
      */
-    public ?string $title = null;
+    public $title = null;
 
     /**
      * @var string|null A description of the item
@@ -82,7 +82,7 @@ class Book
      * @Groups("book:read")
      * @ApiProperty(iri="http://schema.org/description")
      */
-    public ?string $description = null;
+    public $description = null;
 
     /**
      * @var string|null The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably
@@ -93,7 +93,7 @@ class Book
      * @Groups("book:read")
      * @ApiProperty(iri="http://schema.org/author")
      */
-    public ?string $author = null;
+    public $author = null;
 
     /**
      * @var \DateTimeInterface|null The date on which the CreativeWork was created or the item was added to a DataFeed
@@ -104,7 +104,7 @@ class Book
      * @Groups("book:read")
      * @ApiProperty(iri="http://schema.org/dateCreated")
      */
-    public ?\DateTimeInterface $publicationDate = null;
+    public $publicationDate = null;
 
     /**
      * @var Collection<int, Review> The book's reviews
@@ -114,14 +114,14 @@ class Book
      * @ApiProperty(iri="http://schema.org/reviews")
      * @ApiSubresource
      */
-    private Collection $reviews;
+    private $reviews;
 
     /**
      * @var string|null The book's cover base64 encoded
      *
      * @Groups("book:cover")
      */
-    public ?string $cover = null;
+    public $cover = null;
 
     public function __construct()
     {

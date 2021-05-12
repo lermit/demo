@@ -21,7 +21,7 @@ class Parchment
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      */
-    private ?UuidInterface $id = null;
+    private $id = null;
 
     public function getId(): ?UuidInterface
     {
@@ -34,7 +34,7 @@ class Parchment
      * @Assert\NotBlank
      * @ORM\Column
      */
-    public ?string $title = null;
+    public $title = null;
 
     /**
      * @var string|null A description of the item
@@ -42,5 +42,5 @@ class Parchment
      * @Assert\NotBlank
      * @ORM\Column(type="text")
      */
-    public ?string $description = null;
+    public $description = null;
 }

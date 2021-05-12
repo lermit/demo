@@ -12,8 +12,8 @@ use App\Repository\TopBook\TopBookDataInterface;
 
 final class TopBookCollectionDataProvider implements ContextAwareCollectionDataProviderInterface, RestrictedDataProviderInterface
 {
-    private TopBookDataInterface $repository;
-    private TopBookCollectionExtensionInterface $paginationExtension;
+    private $repository;
+    private $paginationExtension;
 
     public function __construct(TopBookDataInterface $repository, TopBookCollectionExtensionInterface $topBookPaginationExtension)
     {

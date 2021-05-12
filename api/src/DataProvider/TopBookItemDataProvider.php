@@ -12,7 +12,7 @@ use App\Repository\TopBook\TopBookDataInterface;
 
 final class TopBookItemDataProvider implements ItemDataProviderInterface, RestrictedDataProviderInterface
 {
-    private TopBookDataInterface $repository;
+    private $repository;
 
     public function __construct(TopBookDataInterface $repository)
     {

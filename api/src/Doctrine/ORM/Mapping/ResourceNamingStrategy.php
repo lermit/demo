@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping\NamingStrategy as NamingStrategyInterface;
 
 class ResourceNamingStrategy implements NamingStrategyInterface
 {
-    private Inflector $inflector;
+    private $inflector;
 
     public function __construct()
     {

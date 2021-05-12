@@ -32,26 +32,26 @@ class TopBook
      *
      * @ApiProperty(identifier=true)
      */
-    private int $id;
+    private $id;
 
-    private string $title;
+    private $title;
 
-    private string $author;
+    private $author;
 
     /**
      * Title and part of the book.
      */
-    private string $part;
+    private $part;
 
     /**
      * Place the book can be found in the library.
      */
-    private string $place;
+    private $place;
 
     /**
      * Number of times the book has been borrowed during one year.
      */
-    private int $borrowCount;
+    private $borrowCount;
 
     public function __construct(int $id, string $title, string $author, string $part, string $place, int $borrowCount)
     {

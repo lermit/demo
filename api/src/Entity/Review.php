@@ -35,7 +35,7 @@ class Review
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      */
-    private ?UuidInterface $id = null;
+    private $id = null;
 
     /**
      * @var string|null The actual body of the review
@@ -45,7 +45,7 @@ class Review
      * @Groups({"book:read", "review:read", "review:write"})
      * @ApiProperty(iri="http://schema.org/reviewBody")
      */
-    public ?string $body = null;
+    public $body = null;
 
     /**
      * @var int|null A rating
@@ -55,7 +55,7 @@ class Review
      * @ORM\Column(type="smallint")
      * @Groups({"review:read", "review:write"})
      */
-    public ?int $rating = null;
+    public $rating = null;
 
     /**
      * @var string|null DEPRECATED (use rating now): A letter to rate the book
@@ -65,7 +65,7 @@ class Review
      * @Groups({"review:read", "review:write"})
      * @ApiProperty(deprecationReason="Use the rating property instead")
      */
-    public ?string $letter = null;
+    public $letter = null;
 
     /**
      * @var Book|null The item that is being reviewed/rated
@@ -77,7 +77,7 @@ class Review
      * @Groups({"review:read", "review:write"})
      * @ApiProperty(iri="http://schema.org/itemReviewed")
      */
-    private ?Book $book = null;
+    private $book = null;
 
     /**
      * @var string|null The author of the review
@@ -86,7 +86,7 @@ class Review
      * @Groups({"review:read", "review:write"})
      * @ApiProperty(iri="http://schema.org/author")
      */
-    public ?string $author = null;
+    public $author = null;
 
     /**
      * @var \DateTimeInterface|null Publication date of the review
@@ -94,7 +94,7 @@ class Review
      * @Groups({"review:read", "review:write"})
      * @ORM\Column(nullable=true, type="datetime")
      */
-    public ?\DateTimeInterface $publicationDate = null;
+    public $publicationDate = null;
 
     public function getId(): ?UuidInterface
     {

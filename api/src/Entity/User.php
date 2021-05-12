@@ -19,26 +19,26 @@ class User implements UserInterface
      * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      * @ORM\Column(type="uuid", unique=true)
      */
-    private ?UuidInterface $id = null;
+    private $id = null;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
-    private ?string $email = null;
+    private $email = null;
 
     /**
      * @var string|null The hashed password
      *
      * @ORM\Column(type="string")
      */
-    private ?string $password = null;
+    private $password = null;
 
     /**
      * @var string[]
      *
      * @ORM\Column(type="json")
      */
-    private array $roles = [];
+    private $roles = [];
 
     public function getId(): ?UuidInterface
     {

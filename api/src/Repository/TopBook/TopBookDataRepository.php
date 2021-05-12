@@ -11,7 +11,7 @@ final class TopBookDataRepository implements TopBookDataInterface
     private const DATA_SOURCE = 'top-100-novel-sci-fi-fr.csv';
     private const FIELDS_COUNT = 5;
 
-    private string $projectDir;
+    private $projectDir;
 
     public function __construct(string $projectDir)
     {

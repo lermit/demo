@@ -20,12 +20,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 final class BookHandler implements MessageHandlerInterface
 {
-    private IriConverterInterface $iriConverter;
-    private SerializerInterface $serializer;
-    private PublisherInterface $publisher;
-    private ResourceMetadataFactoryInterface $resourceMetadataFactory;
-    private HttpClientInterface $client;
-    private LoggerInterface $logger;
+    private $iriConverter;
+    private $serializer;
+    private $publisher;
+    private $resourceMetadataFactory;
+    private $client;
+    private $logger;
 
     public function __construct(
         IriConverterInterface $iriConverter,
