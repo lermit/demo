@@ -13,7 +13,7 @@ use App\Controller\LegacyApiController;
  */
 final class LegacyApiControllerTest extends ApiTestCase
 {
-    private Client $client;
+    private $client;
 
     protected function setup(): void
     {

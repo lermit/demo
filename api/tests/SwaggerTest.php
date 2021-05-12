@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 final class SwaggerTest extends WebTestCase
 {
-    private KernelBrowser $client;
+    private $client;
 
     protected function setup(): void
     {

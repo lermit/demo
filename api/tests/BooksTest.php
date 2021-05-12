@@ -17,8 +17,8 @@ class BooksTest extends ApiTestCase
     // This trait provided by HautelookAliceBundle will take care of refreshing the database content to put it in a known state between every tests
     use RefreshDatabaseTrait;
 
-    private Client $client;
-    private Router $router;
+    private $client;
+    private $router;
 
     protected function setup(): void
     {

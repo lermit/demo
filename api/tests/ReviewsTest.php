@@ -14,7 +14,7 @@ final class ReviewsTest extends ApiTestCase
 {
     use RefreshDatabaseTrait;
 
-    private Client $client;
+    private $client;
     private const ISBN = '9786644879585';
 
     protected function setup(): void
