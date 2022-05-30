@@ -13,7 +13,7 @@ import {
   fetchHydra as baseFetchHydra,
   useIntrospection,
 } from "@api-platform/admin";
-import parseHydraDocumentation from "@api-platform/api-doc-parser/lib/hydra/parseHydraDocumentation";
+import { parseHydraDocumentation } from '@api-platform/api-doc-parser';
 import {
   AutocompleteInput,
   ReferenceField,
