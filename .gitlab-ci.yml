@@ -1,0 +1,15 @@
+stages:
+  - build
+  - deploy
+
+build client:
+  stage: build
+  script:
+    - cd client
+    - npm install
+    - npm run build
+
+#deploy client:
+#  stage: deploy
+#  script:
+#    - phploy -s ...
