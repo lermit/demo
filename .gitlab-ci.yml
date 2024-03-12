@@ -9,8 +9,14 @@ build client:
     - cd client
     - npm install
     - npm run build
+  artifacts:
+    paths:
+      - client/build
 
-#deploy client:
-#  stage: deploy
-#  script:
-#    - phploy -s ...
+deploy client:
+  stage: deploy
+  image:
+    name: pockost/phploy:4.9.3
+    entrypoint: [""]
+  script:
+    - phploy -s client-prod
