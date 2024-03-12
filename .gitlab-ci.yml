@@ -4,6 +4,7 @@ stages:
 
 build client:
   stage: build
+  image: node:18
   script:
     - cd client
     - npm install
